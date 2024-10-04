@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>GAMER</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#">
+      <img class="header__logo" src="images/logo.svg" alt="logo">
+    </a>
+
+    <nav class="header__menu">
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__item-link" href="#home">Home</a>
+        </li>
+        <li class="header__item">
+          <a class="header__item-link" href="#about-us">About us</a>
+        </li>
+        <li class="header__item">
+          <a class="header__item-link" href="#games">Our games</a>
+        </li>
+        <li class="header__item">
+          <a class="header__item-link" href="#contact-us">Contact us</a>
+        </li>
+        <li class="header__login">
+          <a class="header__login-link" id="register-btn" href="#">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="#menu">
+      <img class="header__burger" src="images/burger-menu-icon.svg" alt="burger-menu">
+    </a>
+  </header>
+
+  <aside id="register-modal" class="register-modal">
+    <div class="register-modal__content">
+        <form id="register-form">
+          <div class="register__top">
+            <h2 class="register-form__title">Login</h2>
+            <img class="close" src="images/close-icon.svg" alt="close">
+          </div>
+          <div class="register__bottom">
+            <div class="register__item">
+              <label class="register__label" for="reg-name">Name</label>
+              <input class="register__input" type="text" id="reg-name" name="name" required>
+            </div>
+            <div class="register__item">
+              <label class="register__label" for="reg-email">Email</label>
+              <input class="register__input" type="email" id="reg-email" name="email" required>
+            </div>
+            <button class="register__button" type="submit">Submit</button>
+          </div>
+        </form>
+    </div>
+  </aside>
+
+  <aside class="menu" id="menu">
+    <div class="menu__top">
+      <a href="#">
+        <img class="header__logo" src="images/logo.svg" alt="logo">
+      </a>
+
+      <a href="#">
+        <img class="header__close" src="images/close-icon.svg" alt="close">
+      </a>
+    </div>
+
+    <p class="menu__desc">
+      Gamer is a top-tier online destination that brings 
+      together a diverse collection of social games designed for 
+      players over 18 years old
+    </p>
+
+    <div class="menu__contacts">
+      <h2 class="menu-contacts__title">Contact Us</h2>
+      <p class="menu-contacts__desc">Address: 1234 Elm Street, Springfield, IL 62704, USA</p>
+      <p class="menu-contacts__desc">Phone: +1 (555) 123-4567</p>
+      <p class="menu-contacts__desc">Email: exampleuser@example.com</p>
+    </div>
+
+    <div class="menu__links">
+      <a href="#privacy" class="menu__link">
+        <h2>Privacy Police</h2>
+      </a>
+
+      <a href="#terms" class="menu__link">
+        <h2>Terms</h2>
+      </a>
+    </div>
+  </aside>
+
+  <aside class="privacy" id="privacy">
+    <div class="privacy__top">
+      <h1 class="privacy__title">Privacy Policy</h1>
+      <a href="#">
+        <img class="privacy__img" src="images/close-icon.svg" alt="close">
+      </a>
+    </div>
+    <ol class="privacy__list">
+      <li class="privacy__item">
+        <h3 class="privacy__item-title">Introduction</h3>
+        <p class="privacy__desc">
+          We respect your privacy and are committed 
+          to protecting your personal information. This Privacy Policy explains what 
+          information we collect, how we use it, and what rights you have regarding your data.
+        </p>
+      </li>
+
+      <li class="privacy__item">
+        <h3 class="privacy__item-title">Data Collection</h3>
+        <p class="privacy__desc">We may collect the following types of data:</p>
+        <ul>
+          <li class="privacy__desc">Personal information you provide to us (name, email address, phone number, etc.).</li>
+          <li class="privacy__desc">Information about your use of our Services (IP addresses, access times, web pages you visit).</li>
+        </ul>
+      </li>
+
+      <li class="privacy__item">
+        <h3 class="privacy__item-title">Use of Data</h3>
+        <p class="privacy__desc">We may use your information to:</p>
+        <ul>
+          <li class="privacy__desc">Provide and improve our Services.</li>
+          <li class="privacy__desc">Communicate with you.</li>
+          <li class="privacy__desc">Send you informational messages, newsletters, or promotions.</li>
+        </ul>
+      </li>
+
+      <li class="privacy__item">
+        <h3 class="privacy__item-title">Data Disclosure</h3>
+        <p class="privacy__desc">
+          We will not disclose your personal information to 
+          third parties without your consent, except as required by law.
+        </p>
+      </li>
+
+      <li class="privacy__item">
+        <h3 class="privacy__item-title">Data Security</h3>
+        <p class="privacy__desc">
+          We use various security measures to protect your 
+          personal information. However, no method of transmission over the 
+          Internet or method of electronic storage is 100% secure.
+        </p>
+      </li>
+
+      <li class="privacy__item">
+        <h3 class="privacy__item-title">Changes to Privacy Policy</h3>
+        <p class="privacy__desc">
+          We may update this Privacy Policy 
+          from time to time. We will notify you of changes 
+          by posting the new version on our website. Your continued use of the 
+          Services after changes means you accept the new Privacy Policy.
+        </p>
+      </li>
+    </ol>
+  </aside>
+
+  <aside class="terms" id="terms">
+    <div class="terms__top">
+      <h1 class="terms__title">Terms of Service</h1>
+      <a href="#">
+        <img class="terms__img" src="images/close-icon.svg" alt="close">
+      </a>
+    </div>
+    <ol class="terms__list">
+      <li class="terms__item">
+        <h3 class="terms__item-title">Introduction</h3>
+        <p class="terms__desc">
+          These Terms of Service govern your access to and use of our website, 
+          applications, and services. By using our Services, you agree to these Terms. 
+          If you do not agree with these Terms, please do not use our Services.
+        </p>
+      </li>
+
+      <li class="terms__item">
+        <h3 class="terms__item-title">Use of Services</h3>
+        <ul>
+          <li class="terms__desc">You agree to use our Services only for lawful purposes.</li>
+          <li class="terms__desc">You are responsible for all activity that occurs under your account.</li>
+          <li class="terms__desc">You agree not to use the Services for any illegal or unauthorized purposes.</li>
+        </ul>
+      </li>
+
+      <li class="terms__item">
+        <h3 class="terms__item-title">Accounts</h3>
+        <ul>
+          <li class="terms__desc">You may need to create an account to access certain features of our Services.</li>
+          <li class="terms__desc">You agree to provide accurate and current information during registration.</li>
+          <li class="terms__desc">You must not share your password or allow others to use your account.</li>
+        </ul>
+      </li>
+
+      <li class="terms__item">
+        <h3 class="terms__item-title">Liability</h3>
+        <p class="terms__desc">
+          We are not liable for any damages or losses arising from your use of or inability to use our Services.
+        </p>
+      </li>
+
+      <li class="terms__item">
+        <h3 class="terms__item-title">Changes to Terms</h3>
+        <p class="terms__desc">
+          We may update these Terms from time to time. We will 
+          notify you of any changes by posting the new Terms on our website. 
+          Your continued use of the Services after changes means you accept the new Terms.
+        </p>
+      </li>
+    </ol>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Step into the world of limitless 
+          <br> adventures and join the ultimate 
+          <br> gaming experience with 
+          <br> <span class="hero__name">Gamer</span>
+        </h1>
+        <p class="hero__desc">
+          Gamer is a top-tier online destination that brings 
+          together a diverse collection of social games designed for 
+          players over 18 years old. Step into captivating virtual landscapes, 
+          engage with a global community of gamers, and set off on exciting new journeys. 
+          Be a part of our expanding network, where you’ll enjoy dynamic multiplayer gameplay, 
+          build lasting connections, hone your skills, and make unforgettable memories. At Gamer, 
+          endless adventures await!
+        </p>
+      </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <h1 class="about-us__title">About Us</h1>
+      <div class="about-us__content">
+        <img class="about-us__image" src="images/logo-men.png" alt="men">
+        <div class="about-us__text">
+          <p class="about-us__desc">
+            At Gamer, we pride ourselves on being a premier online 
+            hub for social gaming, offering a vast array of games that 
+            cater to players of all ages and interests. Immerse yourself in 
+            vibrant virtual worlds where fun and excitement know no bounds.
+          </p>
+  
+          <p class="about-us__desc">
+            Our community is at the heart of everything we do. Join players 
+            from around the globe as you embark on thrilling adventures, collaborate in 
+            multiplayer challenges, and forge meaningful friendships. With a focus on inclusivity 
+            and engagement, we provide a platform where everyone can showcase their skills and creativity.
+          </p>
+           
+          <p class="about-us__desc">
+            Whether you're a casual gamer or a seasoned pro, Gamer promises 
+            an unforgettable experience filled with new challenges, camaraderie, 
+            and the joy of play. Get ready to explore limitless possibilities and create 
+            lasting memories with us!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <aside id="game-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="game-frame" width="98%" height="98%"></iframe>
+      </div>
+    </aside>
+
+    <section class="games" id="games">
+      <h1 class="games__title">Our Games</h1>
+      <ul class="games__list">
+        <li class="games__item">
+          <img class="games__img" src="images/badge-blitz.webp" alt="">
+          <div class="games__content">
+            <p class="games__name">Badge Blitz</p>
+            <a href="#" class="games__arrow" data-url="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs25badge&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F" style="border:none;" src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs25badge&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD">
+              <img src="images/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </li>
+
+        <li class="games__item">
+          <img class="games__img" src="images/gem-elevator.webp" alt="">
+          <div class="games__content">
+            <p class="games__name">Gem Elevator</p>
+            <a href="#" class="games__arrow" data-url="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs20elevclust&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F" style="border:none;" src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs20elevclust&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD">
+              <img src="images/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </li>
+
+        <li class="games__item">
+          <img class="games__img" src="images/oodles-of-noodles.webp" alt="">
+          <div class="games__content">
+            <p class="games__name">Oodles of Noodles</p>
+            <a href="#" class="games__arrow" data-url="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs10noodles&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F" style="border:none;" src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs10noodles&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD">
+              <img src="images/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <h1 class="games__title">Popular Games</h1>
+      <ul class="games__list">
+        <li class="games__item">
+          <img class="games__img" src="images/wisdom-of-athena-1000-portrait.jpg" alt="">
+          <div class="games__content">
+            <p class="games__name">Wisdom of Athena 1000</p>
+            <a href="#" class="games__arrow" data-url="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs20procountx&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F" style="border:none;" src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs20procountx&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD">
+              <img src="images/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </li>
+
+        <li class="games__item">
+          <img class="games__img" src="images/congo-cash-xl.webp" alt="">
+          <div class="games__content">
+            <p class="games__name">Congo Cash XL</p>
+            <a href="#" class="games__arrow" data-url="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswayscongcash&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F" style="border:none;" src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswayscongcash&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD">
+              <img src="images/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </li>
+
+        <li class="games__item">
+          <img class="games__img" src="images/hot-to-burn.jpg" alt="">
+          <div class="games__content">
+            <p class="games__name">Hot to Burn</p>
+            <a href="#" class="games__arrow" data-url="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs10hottb7fs&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F" style="border:none;" src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs10hottb7fs&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD">
+              <img src="images/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact-us" id="contact-us">
+      <h1 class="contact-us__title">Contact Us</h1>
+      <div class="contact-us__content">
+        <form id="contact-form">
+          <div class="contact-us__forms">
+            <div class="contact-us__form">
+              <label class="contact-us__label" for="name">Name</label>
+              <input class="contact-us__input" type="text" id="name" name="name" required>
+            </div>
+    
+            <div class="contact-us__form">
+              <label class="contact-us__label" for="email">Email</label>
+              <input class="contact-us__input" type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="contact-us__form">
+              <label class="contact-us__label" for="message">Message</label>
+              <textarea class="contact-us__input" name="message" id="message" rows="5" required></textarea>
+            </div>
+
+            <div id="success-message" class="success-message" style="display: none;">Your message was sent successfully! Thanks!</div>
+  
+            <button class="contact-us__button" type="submit">Send</button>
+          </div>
+        </form>
+
+        <img class="contact-us__img" src="images/gamer.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <div class="disclaimer__content">
+        <img class="disclaimer__icon" src="images/18-icon.svg" alt="icon">
+        <h1 class="disclaimer__title">Disclaimer</h1>
+      </div>
+
+      <p class="disclaimer__desc">
+        This website contains gaming content intended for individuals aged 18 and older. 
+        By using this platform, you confirm that you are at least 18 years old and that 
+        you are prepared to accept the risks associated with adult gaming.
+      </p>
+      <p class="disclaimer__desc">
+        All games presented on this site are fictional, and no information is intended to reflect real events or persons. 
+        We are not responsible for any consequences that 
+        may arise from your use of this content.
+      </p>
+      <p class="disclaimer__desc">Please play responsibly.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#">
+      <img class="footer__logo" src="images/logo.svg" alt="logo">
+    </a>
+
+    <div class="footer__content">
+      <div class="footer__contacts">
+        <h2 class="footer__contacts-title">Contact Us</h2>
+        <p class="footer__contacts-desc">Address: 1234 Elm Street, Springfield, IL 62704, USA</p>
+        <p class="footer__contacts-desc">Phone: +1 (555) 123-4567</p>
+        <p class="footer__contacts-desc">Email: exampleuser@example.com</p>
+      </div>
+  
+      <div class="footer__links">
+        <a class="footer__link" href="#privacy">
+          <h2>Privacy Police</h2>
+        </a>
+        <hr>
+        <a class="footer__link" href="#terms">
+          <h2>Terms</h2>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This website uses cookies to ensure you get the best experience on our website. <a href="#privacy">Learn more</a>.</p>
+    <button id="accept-cookies" class="cookie-button">Accept</button>
+    <button id="decline-cookies" class="cookie-button">Decline</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

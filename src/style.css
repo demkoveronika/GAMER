@@ -1,0 +1,937 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+  margin: 10px;
+  background-color: black;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.5s ease;
+}
+
+.header__logo:hover {
+  transform: scale(1.1);
+}
+
+
+.header__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.header__item-link {
+  color: red;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.header__item {
+  transition: transform 0.5s ease;
+  text-align: center;
+}
+
+.header__item:hover {
+  transform: translateY(-10px);
+}
+
+.header__burger {
+  transition: transform 0.5s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.header__burger:hover {
+  transform: scale(1.1);
+}
+
+.header__login {
+  border: 1px red solid;
+  transition: transform 0.6s ease;
+  margin-right: 10px;
+}
+
+.header__login-link {
+  color: red;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 5px 5px;
+}
+
+.header__login:hover {
+  background-color: red;
+  border: 1px black solid;
+  transform: scale(1.1);
+}
+
+.header__login-link:hover {
+  color: black;
+}
+
+/* REGISTERED MODAL */
+
+.register-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 300px; 
+  height: auto; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.register-modal__content {
+  padding: 20px; 
+}
+
+.close {
+  cursor: pointer;
+  float: right; 
+  width: 28px;
+  height: 28px;
+}
+
+.register-form__title {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  margin: 0;
+}
+
+.register__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.register__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.register__button {
+  height: 30px;
+  width: 90px;
+  background-color: red;
+  border: 2px solid darkred;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register__input {
+  width: auto;
+  border: 2px solid black;
+}
+
+.register__label {
+  font-weight: 700;
+  font-size: 20px;
+  color: darkred;
+}
+
+.register__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-modal.show {
+  display: flex; 
+  opacity: 1; 
+  pointer-events: all;
+}
+
+/* PRIVACY */
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: black;
+
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  z-index: 1;
+  padding-top: 40px;
+} 
+
+.privacy:target {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.privacy:has(.privacy:target) {
+  overflow: hidden;
+}
+
+.privacy__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.privacy__title {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.privacy__img {
+  width: 24px;
+  height: 24px;
+}
+
+.privacy__list {
+  color: red;
+  font-size: 10px;
+}
+
+.privacy__item-title {
+  font-size: 10px;
+  color: red;
+  text-transform: uppercase;
+}
+
+.privacy__desc {
+  color: white;
+  font-size: 10px;
+}
+
+/* TERMS */
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: black;
+
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  z-index: 1;
+  padding-top: 40px;
+} 
+
+.terms:target {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.terms:has(.terms:target) {
+  overflow: hidden;
+}
+
+.terms__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.terms__title {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.terms__img {
+  width: 24px;
+  height: 24px;
+}
+
+.terms__list {
+  color: red;
+  font-size: 10px;
+}
+
+.terms__item-title {
+  font-size: 10px;
+  color: red;
+  text-transform: uppercase;
+}
+
+.terms__desc {
+  color: white;
+  font-size: 10px;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: white;
+
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+.menu__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__desc {
+  font-size: 20px;
+}
+
+.header__close {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.5s ease;
+}
+
+.header__close:hover {
+  transform: scale(1.1);
+}
+
+.menu-contacts__title {
+  font-size: 30px;
+  color: red;
+}
+
+.menu__link {
+  font-size: 20px;
+  color: red;
+  text-decoration: none;
+}
+
+.menu:target {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.menu:has(.menu:target) {
+  overflow: hidden;
+}
+
+
+/* HERO */
+
+.hero__img {
+  width: 60%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.hero {
+  background-image: url(images/hero-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  opacity: 0.6;
+  padding: 20px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.hero__title {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+.hero__name {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.hero__desc {
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  font-family: "Edu AU VIC WA NT Dots", cursive;
+}
+
+
+/* ABOUT US */
+
+.about-us {
+  margin-top: 100px;
+  border: 4px solid darkred;
+  padding: 50px;
+  border-radius: 50px;
+}
+
+.about-us__title {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.about-us__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us__image {
+  width: 350px;
+  height: auto;
+}
+
+.about-us__desc {
+  color: white;
+  font-size: 22px;
+  font-family: "Edu AU VIC WA NT Dots", cursive;
+}
+
+
+/* GAMES */
+
+.games {
+  margin-top: 100px;
+}
+
+.games__title {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.games__img {
+  width: 350px;
+  height: 400px;
+  border: 4px solid darkred;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.games__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+}
+
+
+.games__item {
+  position: relative;
+  width: 360px; 
+  height: 410px; 
+  overflow: hidden;
+}
+
+.games__name {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.games__arrow {
+  width: 32px;
+  height: 32px;
+  padding-right: 20px;
+}
+
+.games__content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  text-align: center;
+  padding: 10px;
+  transition: top 0.3s ease; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.games__item:hover .games__content {
+  top: 80%; 
+}
+
+/* MODAL */
+
+.modal {
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); 
+  transition: opacity 0.3s ease; 
+  opacity: 0; 
+  pointer-events: none; 
+  z-index: 1000; 
+  
+}
+
+.modal.open {
+  display: flex; 
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+.modal-content {
+  position: relative;
+  width: 90%; 
+  height: 90%; 
+  margin: auto; 
+  overflow: hidden;
+}
+
+/* CONTACT */
+
+.contact-us {
+  margin-top: 150px;
+  border: 4px solid darkred;
+  padding: 50px;
+  border-radius: 50px;
+}
+
+.contact-us__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.contact-us__title {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 120px;
+}
+
+.contact-us__forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.contact-us__label {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.contact-us__input {
+  height: 50px;
+  background-color: white;
+  border: 2px solid darkred;
+  border-radius: 8px;
+}
+
+.contact-us__button {
+  background-color: darkred;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-us__img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.6;
+  margin-top: 50px;
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green; 
+  font-size: 16px; 
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+  margin-top: 80px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  border: 4px solid darkred;
+}
+
+.disclaimer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.disclaimer__title {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+  color: red;
+  text-transform: uppercase;
+}
+
+.disclaimer__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.disclaimer__desc {
+  color: black;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+  padding-bottom: 0;
+  margin-top: 150px;
+  margin-bottom: 10px;
+}
+
+.footer__logo {
+  width: 200px;
+  height: auto;
+}
+
+.footer__contacts-title {
+  color: white;
+}
+
+.footer__contacts-desc {
+  color: white;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+
+/* COOKIE BANNER */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background-color: white; 
+  color: red; 
+  padding: 40px;
+  text-align: center;
+  z-index: 1000; 
+  display: none; 
+  border: 4px solid black;
+}
+
+.cookie-button {
+  background-color: red; 
+  border: 2px solid black;
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.cookie-button:hover {
+  background-color: darkred; 
+}
+
+@media (min-width: 740px) {
+
+  /* HEADER */
+
+  .header__logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header__burger {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header__item-link {
+    font-size: 20px;
+  }
+
+  .header__login-link {
+    font-size: 20px;
+  }
+}
+
+
+@media (min-width: 1220px) {
+
+  /* HEADER */
+
+  .header__logo {
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+  }
+
+  .header__list {
+    gap: 50px;
+  }
+
+  .header__item-link {
+    font-size: 28px;
+  }
+
+  .header__burger {
+    margin-right: 20px;
+    width: auto;
+    height: auto;
+  }
+
+  .header__login {
+    margin-right: 0;
+  }
+
+  .header__login-link {
+    font-size: 28px;
+    padding: 15px 20px;
+  }
+
+  /* PRIVACY */
+
+  .privacy {
+    padding-left: 70px;
+  } 
+
+  .privacy__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .privacy__list {
+    font-size: 15px;
+  }
+
+  .privacy__item-title {
+    font-size: 20px;
+  }
+
+  .privacy__desc {
+    font-size: 15px;
+  }
+
+  /* TERMS */
+
+  .terms {
+    padding-left: 70px;
+  } 
+
+  .terms__title {
+    font-size: 20px;
+  }
+
+  .terms__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .terms__list {
+    font-size: 15px;
+  }
+
+  .terms__item-title {
+    font-size: 20px;
+  }
+
+  .terms__desc {
+    font-size: 15px;
+  }
+
+/* MENU */
+
+.menu {
+  padding-top: 0;
+}
+
+.header__close {
+  width: 48px;
+  height: 48px;
+}
+
+  /* HERO */
+
+  .hero__title {
+    font-size: 50px;
+  }
+
+  .hero__name {
+    font-size: 60px;
+  }
+
+  .hero__desc {
+    font-size: 28px;
+    width: 730px;
+  }
+
+  /* ABOUT US */
+
+  .about-us__title {
+    font-size: 40px;
+  }
+
+  .about-us__content {
+    flex-direction: row;
+  }
+
+  .about-us__image {
+    width: 700px;
+  }
+
+  /* GAMES */
+
+  .games {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .games__title {
+    font-size: 40px;
+  }
+
+  .games__list {
+    flex-direction: row;
+  }
+
+  /* CONTACT */
+
+  .contact-us__content {
+    flex-direction: row;
+  }
+
+  .contact-us__title {
+    font-size: 40px;
+  }
+
+  .contact-us__form {
+    width: 600px;
+  }
+
+  .contact-us__img {
+    width: 500px;
+    margin-top: 0;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    flex-direction: row;
+    gap: 400px;
+  }
+}
