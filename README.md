@@ -13,4 +13,4 @@
   I designed the entire platform myself, ensuring a unique and user-friendly experience.
 
 ## DEMO link
-  - [GAMER DEMO](https://gamer-sjar-dn2wpxjpx-demkoveronikas-projects.vercel.app)
+  - [GAMER DEMO](https://gamer-sjar.vercel.app/)
