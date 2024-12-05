@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const arrows = document.querySelectorAll('.games__arrow');
   const modal = document.getElementById('game-modal');
   const iframe = document.getElementById('game-frame');
-  const closeButton = document.querySelector('.close');
 
   arrows.forEach(arrow => {
       arrow.addEventListener('click', (event) => {
@@ -12,12 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
           iframe.src = gameUrl;
           modal.classList.add('open'); 
       });
-  });
-
-  
-  closeButton.addEventListener('click', () => {
-      modal.classList.remove('open'); 
-      iframe.src = ''; 
   });
 
   window.addEventListener('click', (event) => {
